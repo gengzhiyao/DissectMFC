@@ -5,10 +5,10 @@ class CObject
 {
 public:
   CObject::CObject()  {
-                         cout << "CObject Constructor \n";
+                         std::cout << "CObject Constructor \n";
                       }
   CObject::~CObject() {
-                         cout << "CObject Destructor \n";
+                         std::cout << "CObject Destructor \n";
                       }
 };
 
@@ -16,10 +16,10 @@ class CCmdTarget : public CObject
 {
 public:
   CCmdTarget::CCmdTarget()  {
-                               cout << "CCmdTarget Constructor \n";
+                               std::cout << "CCmdTarget Constructor \n";
                             }
   CCmdTarget::~CCmdTarget() {
-                               cout << "CCmdTarget Destructor \n";
+                               std::cout << "CCmdTarget Destructor \n";
                             }
 };
 
@@ -27,10 +27,10 @@ class CWinThread : public CCmdTarget
 {
 public:
   CWinThread::CWinThread()  {
-                               cout << "CWinThread Constructor \n";
+                               std::cout << "CWinThread Constructor \n";
                             }
   CWinThread::~CWinThread() {
-                               cout << "CWinThread Destructor \n";
+                               std::cout << "CWinThread Destructor \n";
                             }
 };
 
@@ -41,11 +41,11 @@ public:
 
 public:
   CWinApp::CWinApp()  {
-                         cout << "CWinApp Constructor \n";
+                         std::cout << "CWinApp Constructor \n";
                          m_pCurrentWinApp = this;
                       }
   CWinApp::~CWinApp() {
-                         cout << "CWinApp Destructor \n";
+                         std::cout << "CWinApp Destructor \n";
                       }
 };
 
@@ -55,11 +55,11 @@ class CDocument : public CCmdTarget
 {
 public:
   CDocument::CDocument()   {
-                              cout << "CDocument Constructor \n";
+                              std::cout << "CDocument Constructor \n";
                            }
 
   CDocument::~CDocument()  {
-                              cout << "CDocument Destructor \n";
+                              std::cout << "CDocument Destructor \n";
                            }
 };
 
@@ -68,10 +68,10 @@ class CWnd : public CCmdTarget
 {
 public:
   CWnd::CWnd()   {
-                    cout << "CWnd Constructor \n";
+                    std::cout << "CWnd Constructor \n";
                  }
   CWnd::~CWnd()  {
-                    cout << "CWnd Destructor \n";
+                    std::cout << "CWnd Destructor \n";
                  }
 };
 
@@ -79,10 +79,10 @@ class CFrameWnd : public CWnd
 {
 public:
   CFrameWnd::CFrameWnd()   {
-                              cout << "CFrameWnd Constructor \n";
+                              std::cout << "CFrameWnd Constructor \n";
                            }
   CFrameWnd::~CFrameWnd()  {
-                              cout << "CFrameWnd Destructor \n";
+                              std::cout << "CFrameWnd Destructor \n";
                            }
 };
 
@@ -90,10 +90,10 @@ class CView : public CWnd
 {
 public:
   CView::CView()   {
-                      cout << "CView Constructor \n";
+                      std::cout << "CView Constructor \n";
                    }
   CView::~CView()  {
-                      cout << "CView Destructor \n";
+                      std::cout << "CView Destructor \n";
                    }
 };
 

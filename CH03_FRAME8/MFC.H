@@ -35,7 +35,7 @@ typedef int            HWND;
 #define     CDocumentid        13
 #define       CMyDocid         131
 
-#include <iostream.h>
+#include <iostream>
 
 ////////////////////////////////////////////////////////////////////
 // Window message map handling
@@ -112,11 +112,11 @@ public:
                             }
 
   virtual BOOL InitInstance() {
-                                cout << "CWinThread::InitInstance \n";
+                                std::cout << "CWinThread::InitInstance \n";
                                 return TRUE;
                               }
   virtual int Run() {
-                      cout << "CWinThread::Run \n";
+                      std::cout << "CWinThread::Run \n";
                       // AfxWndProc(...);
                       return 1;
                     }
@@ -138,15 +138,15 @@ public:
                       }
 
   virtual BOOL InitApplication() {
-                                   cout << "CWinApp::InitApplication \n";
+                                   std::cout << "CWinApp::InitApplication \n";
                                    return TRUE;
                                  }
   virtual BOOL InitInstance()    {
-                                   cout << "CWinApp::InitInstance \n";
+                                   std::cout << "CWinApp::InitInstance \n";
                                    return TRUE;
                                  }
   virtual int Run() {
-                      cout << "CWinApp::Run \n";
+                      std::cout << "CWinApp::Run \n";
                       return CWinThread::Run();
                     }
 

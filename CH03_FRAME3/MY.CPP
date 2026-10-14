@@ -21,9 +21,9 @@ void PrintAllClasses()
     for (pClass = CRuntimeClass::pFirstClass; pClass != NULL;
             pClass = pClass->m_pNextClass)
     {
-        cout << pClass->m_lpszClassName << "\n";
-        cout << pClass->m_nObjectSize << "\n";
-        cout << pClass->m_wSchema << "\n";
+        std::cout << pClass->m_lpszClassName << "\n";
+        std::cout << pClass->m_nObjectSize << "\n";
+        std::cout << pClass->m_wSchema << "\n";
     }
 }
 //------------------------------------------------------------------
@@ -41,4 +41,3 @@ void main()
 }
 //------------------------------------------------------------------
 
-

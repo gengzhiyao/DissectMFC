@@ -14,7 +14,7 @@
 #include "Scribble.h"
 
 #include "ScribDoc.h"
-#include "PenDlg.h"
+#include "Pendlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

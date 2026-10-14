@@ -1,5 +1,5 @@
 
-#include <iostream.h>
+#include <iostream>
 #include "mfc.h"
 
 class CMyWinApp : public CWinApp
@@ -21,5 +21,3 @@ public:
                   }
 };
 
-
-

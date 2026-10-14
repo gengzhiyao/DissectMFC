@@ -6,7 +6,7 @@ typedef char*   LPSTR;
 #define UINT int
 #define PASCAL _stdcall
 
-#include <iostream.h>
+#include <iostream>
 
 class CObject;
 
@@ -165,4 +165,3 @@ public:
 // global function
 CWinApp* AfxGetApp();
 
-

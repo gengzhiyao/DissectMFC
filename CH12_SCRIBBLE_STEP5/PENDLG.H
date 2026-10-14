@@ -1,4 +1,4 @@
-// PenDlg.h : header file
+// Pstd::endlg.h : header file
 //
 // This is a part of the Microsoft Foundation Classes C++ library.
 // Copyright (C) 1992-1995 Microsoft Corporation

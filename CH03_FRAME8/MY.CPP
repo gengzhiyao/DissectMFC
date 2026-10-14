@@ -4,7 +4,7 @@ CMyWinApp theApp;  // global object
 
 BOOL CMyWinApp::InitInstance()
 {
-    cout << "CMyWinApp::InitInstance \n";
+    std::cout << "CMyWinApp::InitInstance \n";
     m_pMainWnd = new CMyFrameWnd;
     return TRUE;
 }
@@ -54,8 +54,8 @@ struct {
     {
         if (classinfo[i].classid == lpEntry->nID)
         {
-            cout << lpEntry->nID << "    ";
-            cout << classinfo[i].classname << endl;
+            std::cout << lpEntry->nID << "    ";
+            std::cout << classinfo[i].classname << std::endl;
             break;
         }
     }
@@ -78,19 +78,19 @@ void main()
     pMyView->m_pDocument = pMyDoc;
 
     // test Message Routing
-    cout << endl << "pMyFrame receive WM_CREATE, ";
-    cout << "routing path and call stack:" << endl;
+    std::cout << std::endl << "pMyFrame receive WM_CREATE, ";
+    std::cout << "routing path and call stack:" << std::endl;
     AfxWndProc(0, WM_CREATE, 0, 0, pMyFrame);
 
-    cout << endl << "pMyView receive WM_PAINT, ";
-    cout << "routing path and call stack:" << endl;
+    std::cout << std::endl << "pMyView receive WM_PAINT, ";
+    std::cout << "routing path and call stack:" << std::endl;
     AfxWndProc(0, WM_PAINT, 0, 0, pMyView);
 
-    cout << endl << "pMyView receive WM_COMMAND, ";
-    cout << "routing path and call stack:" << endl;
+    std::cout << std::endl << "pMyView receive WM_COMMAND, ";
+    std::cout << "routing path and call stack:" << std::endl;
     AfxWndProc(0, WM_COMMAND, 0, 0, pMyView);
 
-    cout << endl << "pMyFrame receive WM_COMMAND, ";
-    cout << "routing path and call stack:" << endl;
+    std::cout << std::endl << "pMyFrame receive WM_COMMAND, ";
+    std::cout << "routing path and call stack:" << std::endl;
     AfxWndProc(0, WM_COMMAND, 0, 0, pMyFrame);
 }

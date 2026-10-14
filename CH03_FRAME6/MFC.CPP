@@ -37,8 +37,8 @@ CRuntimeClass* PASCAL CRuntimeClass::Load()
         CRuntimeClass* pClass;
 
         // JJHOU : instead of Load from file, we Load from cin.
-        cout << "enter a class name...  ";
-        cin >> szClassName;
+        std::cout << "enter a class name...  ";
+        std::cin >> szClassName;
 
         for (pClass = pFirstClass; pClass != NULL; pClass = pClass->m_pNextClass)
         {

@@ -5,7 +5,7 @@ extern void printlpEntries(AFX_MSGMAP_ENTRY* lpEntry);
 
 BOOL CCmdTarget::OnCmdMsg(UINT nID, int nCode)
 {
-    cout << "CCmdTarget::OnCmdMsg()" << endl;
+    std::cout << "CCmdTarget::OnCmdMsg()" << std::endl;
     // Now look through message map to see if it applies to us
     AFX_MSGMAP* pMessageMap;
     AFX_MSGMAP_ENTRY* lpEntry;
@@ -21,20 +21,20 @@ BOOL CCmdTarget::OnCmdMsg(UINT nID, int nCode)
 
 BOOL CWnd::Create()
 {
-    cout << "CWnd::Create \n";
+    std::cout << "CWnd::Create \n";
     return TRUE;
 }
 
 BOOL CWnd::CreateEx()
 {
-    cout << "CWnd::CreateEx \n";
+    std::cout << "CWnd::CreateEx \n";
     PreCreateWindow();
     return TRUE;
 }
 
 BOOL CWnd::PreCreateWindow()
 {
-  cout << "CWnd::PreCreateWindow \n";
+  std::cout << "CWnd::PreCreateWindow \n";
   return TRUE;
 }
 
@@ -43,7 +43,7 @@ LRESULT CWnd::WindowProc(UINT nMsg, WPARAM wParam, LPARAM lParam)
     AFX_MSGMAP* pMessageMap;
     AFX_MSGMAP_ENTRY* lpEntry;
 
-    cout << "CWnd::WindowProc()" << endl;
+    std::cout << "CWnd::WindowProc()" << std::endl;
     if (nMsg == WM_COMMAND) // special case for commands
     {
         if (OnCommand(wParam, lParam))
@@ -67,20 +67,20 @@ LRESULT CWnd::WindowProc(UINT nMsg, WPARAM wParam, LPARAM lParam)
 
 LRESULT CWnd::DefWindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 {
-    cout << "CWnd::DefWindowProc()" << endl;
+    std::cout << "CWnd::DefWindowProc()" << std::endl;
     return TRUE;
 }
 
 BOOL CWnd::OnCommand(WPARAM wParam, LPARAM lParam)
 {
-    cout << "CWnd::OnCommand()" << endl;
+    std::cout << "CWnd::OnCommand()" << std::endl;
     // ...
     return OnCmdMsg(0, 0);
 }
 
 BOOL CFrameWnd::OnCommand(WPARAM wParam, LPARAM lParam)
 {
-    cout << "CFrameWnd::OnCommand()" << endl;
+    std::cout << "CFrameWnd::OnCommand()" << std::endl;
     // ...
     // route as normal command
     return CWnd::OnCommand(wParam, lParam);
@@ -88,26 +88,26 @@ BOOL CFrameWnd::OnCommand(WPARAM wParam, LPARAM lParam)
 
 BOOL CFrameWnd::Create()
 {
-    cout << "CFrameWnd::Create \n";
+    std::cout << "CFrameWnd::Create \n";
     CreateEx();
     return TRUE;
 }
 
 BOOL CFrameWnd::PreCreateWindow()
 {
-    cout << "CFrameWnd::PreCreateWindow \n";
+    std::cout << "CFrameWnd::PreCreateWindow \n";
     return TRUE;
 }
 
 CView* CFrameWnd::GetActiveView() const
 {
-    cout << "CFrameWnd::GetActiveView()" << endl;
+    std::cout << "CFrameWnd::GetActiveView()" << std::endl;
     return m_pViewActive;
 }
 
 BOOL CFrameWnd::OnCmdMsg(UINT nID, int nCode)
 {
-    cout << "CFrameWnd::OnCmdMsg()" << endl;
+    std::cout << "CFrameWnd::OnCmdMsg()" << std::endl;
     // pump through current view FIRST
     CView* pView = GetActiveView();
     if (pView->OnCmdMsg(nID, nCode))
@@ -127,7 +127,7 @@ BOOL CFrameWnd::OnCmdMsg(UINT nID, int nCode)
 
 BOOL CDocument::OnCmdMsg(UINT nID, int nCode)
 {
-    cout << "CDocument::OnCmdMsg()" << endl;
+    std::cout << "CDocument::OnCmdMsg()" << std::endl;
     if (CCmdTarget::OnCmdMsg(nID, nCode))
         return TRUE;
 
@@ -136,7 +136,7 @@ BOOL CDocument::OnCmdMsg(UINT nID, int nCode)
 
 BOOL CView::OnCmdMsg(UINT nID, int nCode)
 {
-    cout << "CView::OnCmdMsg()" << endl;
+    std::cout << "CView::OnCmdMsg()" << std::endl;
     if (CWnd::OnCmdMsg(nID, nCode))
         return TRUE;
 
@@ -189,14 +189,14 @@ CWinApp* AfxGetApp()
 LRESULT AfxWndProc(HWND hWnd, UINT nMsg, WPARAM wParam, LPARAM lParam,
                    CWnd *pWnd)  // last param. pWnd is added by JJHou.
 {
-  cout << "AfxWndProc()" << endl;
+  std::cout << "AfxWndProc()" << std::endl;
   return AfxCallWndProc(pWnd, hWnd, nMsg, wParam, lParam);
 }
 
 LRESULT AfxCallWndProc(CWnd* pWnd, HWND hWnd, UINT nMsg,
                        WPARAM wParam, LPARAM lParam)
 {
-  cout << "AfxCallWndProc()" << endl;
+  std::cout << "AfxCallWndProc()" << std::endl;
   LRESULT lResult = pWnd->WindowProc(nMsg, wParam, lParam);
   return lResult;
 }

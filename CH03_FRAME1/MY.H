@@ -7,10 +7,10 @@ class CMyWinApp : public CWinApp
 {
 public:
   CMyWinApp::CMyWinApp()   {
-                              cout << "CMyWinApp Constructor \n";
+                              std::cout << "CMyWinApp Constructor \n";
                            }
   CMyWinApp::~CMyWinApp()  {
-                              cout << "CMyWinApp Destructor \n";
+                              std::cout << "CMyWinApp Destructor \n";
                            }
 };
 
@@ -18,9 +18,9 @@ class CMyFrameWnd : public CFrameWnd
 {
 public:
   CMyFrameWnd()   {
-                     cout << "CMyFrameWnd Constructor \n";
+                     std::cout << "CMyFrameWnd Constructor \n";
                   }
   ~CMyFrameWnd()  {
-                     cout << "CMyFrameWnd Destructor \n";
+                     std::cout << "CMyFrameWnd Destructor \n";
                   }
 };

@@ -25,9 +25,9 @@ void PrintAllClasses()
     for (pClass = CRuntimeClass::pFirstClass; pClass != NULL;
             pClass = pClass->m_pNextClass)
     {
-        cout << pClass->m_lpszClassName << "\n";
-        cout << pClass->m_nObjectSize << "\n";
-        cout << pClass->m_wSchema << "\n";
+        std::cout << pClass->m_lpszClassName << "\n";
+        std::cout << pClass->m_nObjectSize << "\n";
+        std::cout << pClass->m_wSchema << "\n";
     }
 }
 //------------------------------------------------------------------
@@ -46,24 +46,22 @@ CMyDoc* pMyDoc = new CMyDoc;
 CMyView* pMyView = new CMyView;
 CWnd* pMyWnd = pApp->m_pMainWnd;
 
-cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CMyDoc))     " << pMyDoc->IsKindOf(RUNTIME_CLASS(CMyDoc))       << "\n";
-cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CDocument))  " << pMyDoc->IsKindOf(RUNTIME_CLASS(CDocument))    << "\n";
-cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CCmdTarget)) " << pMyDoc->IsKindOf(RUNTIME_CLASS(CCmdTarget))   << "\n";
-cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CObject))    " << pMyDoc->IsKindOf(RUNTIME_CLASS(CObject))      << "\n";
-cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CWinApp))    " << pMyDoc->IsKindOf(RUNTIME_CLASS(CWinApp))      << "\n";
-cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CView))      " << pMyDoc->IsKindOf(RUNTIME_CLASS(CView))        << "\n";
+std::cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CMyDoc))     " << pMyDoc->IsKindOf(RUNTIME_CLASS(CMyDoc))       << "\n";
+std::cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CDocument))  " << pMyDoc->IsKindOf(RUNTIME_CLASS(CDocument))    << "\n";
+std::cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CCmdTarget)) " << pMyDoc->IsKindOf(RUNTIME_CLASS(CCmdTarget))   << "\n";
+std::cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CObject))    " << pMyDoc->IsKindOf(RUNTIME_CLASS(CObject))      << "\n";
+std::cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CWinApp))    " << pMyDoc->IsKindOf(RUNTIME_CLASS(CWinApp))      << "\n";
+std::cout << "pMyDoc->IsKindOf(RUNTIME_CLASS(CView))      " << pMyDoc->IsKindOf(RUNTIME_CLASS(CView))        << "\n";
 
-cout << "pMyView->IsKindOf(RUNTIME_CLASS(CView))     " << pMyView->IsKindOf(RUNTIME_CLASS(CView))       << "\n";
-cout << "pMyView->IsKindOf(RUNTIME_CLASS(CObject))   " << pMyView->IsKindOf(RUNTIME_CLASS(CObject))     << "\n";
-cout << "pMyView->IsKindOf(RUNTIME_CLASS(CWnd))      " << pMyView->IsKindOf(RUNTIME_CLASS(CWnd))        << "\n";
-cout << "pMyView->IsKindOf(RUNTIME_CLASS(CFrameWnd)) " << pMyView->IsKindOf(RUNTIME_CLASS(CFrameWnd))   << "\n";
+std::cout << "pMyView->IsKindOf(RUNTIME_CLASS(CView))     " << pMyView->IsKindOf(RUNTIME_CLASS(CView))       << "\n";
+std::cout << "pMyView->IsKindOf(RUNTIME_CLASS(CObject))   " << pMyView->IsKindOf(RUNTIME_CLASS(CObject))     << "\n";
+std::cout << "pMyView->IsKindOf(RUNTIME_CLASS(CWnd))      " << pMyView->IsKindOf(RUNTIME_CLASS(CWnd))        << "\n";
+std::cout << "pMyView->IsKindOf(RUNTIME_CLASS(CFrameWnd)) " << pMyView->IsKindOf(RUNTIME_CLASS(CFrameWnd))   << "\n";
 
-cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CFrameWnd))  " << pMyWnd->IsKindOf(RUNTIME_CLASS(CFrameWnd))    << "\n";
-cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CWnd))       " << pMyWnd->IsKindOf(RUNTIME_CLASS(CWnd))         << "\n";
-cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CObject))    " << pMyWnd->IsKindOf(RUNTIME_CLASS(CObject))      << "\n";
-cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CDocument))  " << pMyWnd->IsKindOf(RUNTIME_CLASS(CDocument))    << "\n";
+std::cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CFrameWnd))  " << pMyWnd->IsKindOf(RUNTIME_CLASS(CFrameWnd))    << "\n";
+std::cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CWnd))       " << pMyWnd->IsKindOf(RUNTIME_CLASS(CWnd))         << "\n";
+std::cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CObject))    " << pMyWnd->IsKindOf(RUNTIME_CLASS(CObject))      << "\n";
+std::cout << "pMyWnd->IsKindOf(RUNTIME_CLASS(CDocument))  " << pMyWnd->IsKindOf(RUNTIME_CLASS(CDocument))    << "\n";
 
 }
 //------------------------------------------------------------------
-
-
