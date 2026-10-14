@@ -39,8 +39,6 @@
 **/*.suo
 **/*.user
 **/build/
-**/*.txt
-!**/CMakeLists.txt
 
 # 编译输出目录（递归匹配所有子文件夹下的这些目录）
 **/Debug/
